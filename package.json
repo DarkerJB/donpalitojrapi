@@ -1,0 +1,21 @@
+{
+  "name": "donpalitojrapi",
+  "version": "1.0.0",
+  "main": "datos.js",
+  "scripts": {
+    "dev": "node --watch datos.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "donpalitojrapi": "file:",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
+  }
+}
