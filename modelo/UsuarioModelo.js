@@ -54,7 +54,7 @@ class UsuarioModelo {
     }
   }
 
-  // Obtener todos los usuarios (opcional)
+  /* Obtener todos los usuarios (opcional)
   static async obtenerUsuarios() {
     try {
       const query = 'SELECT * FROM usuarios';
@@ -64,7 +64,7 @@ class UsuarioModelo {
       console.error('❌ Error al obtener usuarios:', error.message);
       throw new Error(`Error al obtener usuarios: ${error.message}`);
     }
-  }
+  }*/
 }
 
 module.exports = UsuarioModelo;
