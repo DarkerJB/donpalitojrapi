@@ -33,7 +33,17 @@ class UsuarioModelo {
     }
   }
 
-  // Obtener todos los usuarios (opcional)
+  // Buscar usuario por nombres (autocompletado)
+  static async buscarPorNombres(name) {
+    const query = 'SELECT * FROM usuarios WHERE nombreCompleto LIKE ?';
+    try {
+      return await conexion.query(query, [`%${name}%`]); // Usar `conexion` en lugar de `dbService`
+    } catch (err) {
+      throw new Error(`Error al buscar el usuario por nombres: ${err.message}`);
+    }
+  }
+
+  /* Obtener todos los usuarios (opcional)
   static async obtenerUsuarios() {
     try {
       const query = 'SELECT * FROM usuarios';
@@ -44,6 +54,7 @@ class UsuarioModelo {
       throw error;
     }
   }
+  */
 }
 
 module.exports = UsuarioModelo;

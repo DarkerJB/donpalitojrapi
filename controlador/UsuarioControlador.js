@@ -29,6 +29,20 @@ class UsuarioControlador {
       res.status(500).json({ error: `Error en el servidor: ${err.message}` });
     }
   }
+
+  // Buscar usuario por nombres
+  static async buscarUsuario(req, res) {
+    const { name } = req.query;
+    if (!name) {
+      return res.status(400).json({ error: 'El parámetro "name" es obligatorio.' });
+    }
+    try {
+      const usuarios = await modelo.buscarPorNombres(name);
+      res.status(200).json(usuarios);
+    } catch (err) {
+      res.status(500).json({ error: `Error: no se pudo buscar el usuario: ${err.message}` });
+    }
+  }
 }
 
 module.exports = UsuarioControlador;

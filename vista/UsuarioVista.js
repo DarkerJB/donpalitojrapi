@@ -3,6 +3,9 @@ const UsuarioControlador = require('../controlador/UsuarioControlador');
 
 const router = express.Router();
 
+// Ruta para buscar usuarios por nombre
+router.get('/buscar', UsuarioControlador.buscarUsuario);
+
 // Middleware para validar los datos antes de registrar un usuario
 const validarRegistroUsuario = (req, res, next) => {
     const { t1: doc, t2: nombreCompleto, t3: telefono, t4: correo, t5: contrasena } = req.body;

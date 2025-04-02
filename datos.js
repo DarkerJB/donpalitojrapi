@@ -1,7 +1,10 @@
 require('dotenv').config(); // Cargar variables de entorno
 const express = require('express');
 const cors = require('cors');
+
+// Importar las rutas
 const registrousuario = require('./vista/UsuarioVista');
+const productoRoutes = require('./vista/ProductoVista'); // Nueva ruta para productos
 
 const app = express();
 const PORT = process.env.PORT || 4545;
@@ -19,7 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Rutas
-app.use('/api/usuarios', registrousuario);
+app.use('/api/usuarios', registrousuario); // Rutas para usuarios
+app.use('/api/productos', productoRoutes); // Rutas para productos
 
 // Middleware para manejar rutas no encontradas
 app.use((req, res) => {
