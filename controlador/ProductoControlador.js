@@ -3,9 +3,10 @@ const modelo = require('../modelo/ProductoModelo');
 class ProductoControlador {
   // Agregar un nuevo producto
   static async agregarProducto(req, res) {
-    const { nombre, descripcion, precio, cantidad, imagen } = req.body;
+    //Agregar seudónimo a los campos para que no se vean los nombres de la base de datos
+    const { t1: nomProd, t2: descProd, t3: precProd, t4: cantiProd, t5: imgProd } = req.body;
     try {
-      const result = await modelo.agregarProducto(nombre, descripcion, precio, cantidad, imagen);
+      const result = await modelo.agregarProducto(nomProd, descProd, precProd, cantiProd, imgProd);
       res.status(201).json({ mensaje: 'Producto agregado exitosamente', id: result.insertId });
     } catch (err) {
       res.status(500).json({ error: `Error: no se pudo agregar el producto: ${err.message}` });
