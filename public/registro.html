@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro - Don Palito Jr</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/registro.css" />
+  <link rel="icon" href="/src/logo_don_palito.png" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <ul class="nav-links">
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="hamburger">&#9776;</div>
+    </div>
+  </nav>
+
+  <main class="registro-container">
+    <form id="form-registro" class="registro-form">
+      <div class="logo-formulario">
+        <img src="/src/logo_don_palito.png" alt="Logo Don Palito Jr" />
+      </div>
+
+      <h2>Registro de Administrador</h2>
+
+      <label for="t1">Documento</label>
+      <input type="text" name="t1" id="t1" placeholder="Ingresa tu documento" required />
+
+      <label for="t2">Nombre Completo</label>
+      <input type="text" name="t2" id="t2" placeholder="Ej: Juan Pérez" required />
+
+      <label for="t3">Teléfono</label>
+      <input type="tel" name="t3" id="t3" placeholder="3001234567" required />
+
+      <label for="t4">Correo</label>
+      <input type="email" name="t4" id="t4" placeholder="ejemplo@correo.com" required />
+
+      <label for="t5">Contraseña</label>
+      <input type="password" name="t5" id="t5" placeholder="********" required />
+
+      <button type="submit" class="btn">Registrarse</button>
+
+      <div class="link-extra">
+        ¿Ya tienes cuenta? <a href="/login.html">Inicia sesión aquí</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Don Palito Jr. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/registro.js"></script>
+</body>
+</html>

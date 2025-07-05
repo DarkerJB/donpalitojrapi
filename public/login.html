@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión - Don Palito Jr</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="/css/login.css" />
+  <link rel="icon" href="/src/logo_don_palito.png" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <ul class="nav-links">
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="hamburger">&#9776;</div>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <main class="login-container">
+    <form id="form-login" class="login-form">
+      <!-- Logo dentro del formulario -->
+      <div class="logo-formulario">
+        <img src="/src/logo_don_palito.png" alt="Logo Don Palito Jr" />
+      </div>
+
+      <h2>Iniciar Sesión</h2>
+
+      <label for="t1">Documento</label>
+      <input type="text" name="t1" id="t1" placeholder="Ingresa tu documento" required />
+
+      <label for="t4">Correo</label>
+      <input type="email" name="t4" id="t4" placeholder="ejemplo@correo.com" required />
+
+      <label for="t5">Contraseña</label>
+      <input type="password" name="t5" id="t5" placeholder="********" required />
+
+      <button type="submit" class="btn">Entrar</button>
+
+      <div class="link-extra">
+        ¿No tienes cuenta? <a href="/registro.html">Regístrate aquí</a>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Don Palito Jr. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

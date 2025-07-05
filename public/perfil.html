@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil - Don Palito Jr</title>
+<link rel="stylesheet" href="/css/perfil.css" />
+  <link rel="icon" href="/src/logo_don_palito.png" />
+</head>
+<body>
+
+  <!-- Logo centrado -->
+  <div class="logo-centro">
+    <img src="/src/logo_don_palito.png" alt="Logo Don Palito Jr" />
+  </div>
+
+  <!-- Menú de navegación horizontal encima del formulario -->
+  <nav class="perfil-navbar">
+    <ul class="perfil-nav-links">
+      <li><a href="#" class="nav-item active" data-section="profile">Información Personal</a></li>
+      <li><a href="#" class="nav-item" data-section="security">Cambiar Contraseña</a></li>
+    </ul>
+  </nav>
+
+  <main class="perfil-contenedor">
+    <!-- Información Personal -->
+    <section id="profileSection" class="perfil-seccion active">
+      <form id="profileForm" class="perfil-form">
+        <h2>Información Personal</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="documento">Documento</label>
+            <input type="text" id="documento" name="documento" readonly />
+          </div>
+          <div class="form-group">
+            <label for="fechaexpedicion">Fecha de Expedición</label>
+            <input type="date" id="fechaexpedicion" name="fechaexpedicion" readonly />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombreCompleto">Nombre Completo</label>
+            <input type="text" id="nombreCompleto" name="nombreCompleto" readonly />
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" readonly />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" readonly />
+          </div>
+          <div class="form-group">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" readonly />
+          </div>
+        </div>
+
+        <div class="security-questions">
+          <h3>Preguntas de Seguridad</h3>
+          <div class="form-group">
+            <label for="respuesta1">Respuesta 1</label>
+            <input type="text" id="respuesta1" name="respuesta1" readonly />
+          </div>
+          <div class="form-group">
+            <label for="respuesta2">Respuesta 2</label>
+            <input type="text" id="respuesta2" name="respuesta2" readonly />
+          </div>
+          <div class="form-group">
+            <label for="respuesta3">Respuesta 3</label>
+            <input type="text" id="respuesta3" name="respuesta3" readonly />
+          </div>
+        </div>
+
+        <div class="form-actions" id="formActions" style="display: none;">
+          <button type="submit" class="btn-primary">Guardar Cambios</button>
+          <button type="button" class="btn-secondary" id="cancelBtn">Cancelar</button>
+        </div>
+
+        <div class="boton-editar">
+          <button type="button" class="btn-primary" id="editBtn">Editar Perfil</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Cambiar Contraseña -->
+    <section id="securitySection" class="perfil-seccion">
+      <form id="passwordForm" class="perfil-form">
+        <h2>Cambiar Contraseña</h2>
+
+        <div class="form-group">
+          <label for="contrasenaActual">Contraseña Actual</label>
+          <input type="password" id="contrasenaActual" name="contrasenaActual" required />
+        </div>
+
+        <div class="form-group">
+          <label for="contrasenaNueva">Nueva Contraseña</label>
+          <input type="password" id="contrasenaNueva" name="contrasenaNueva" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmarContrasena">Confirmar Nueva Contraseña</label>
+          <input type="password" id="confirmarContrasena" name="confirmarContrasena" required />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Actualizar Contraseña</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Overlay de carga -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Notificación -->
+  <div id="notification" class="notification">
+    <span id="notificationMessage"></span>
+    <button id="notificationClose" class="notification-close">×</button>
+  </div>
+
+  <script src="/js/perfil.js"></script>
+</body>
+</html>
